@@ -134,7 +134,7 @@ After all this process, we finally have 696 rows and 20 columns.
 
 ![Distribution of Relation](https://github.com/Clarkson-Applied-Data-Science/2024_ia651_hemamalini_shifat/blob/main/Distribtuion%20of%20relation.png)
 
-![Distribution of Class/ASD](https://github.com/Clarkson-Applied-Data-Science/2024_ia651_hemamalini_shifat/blob/main/Distribtuion%20of%20Autism.png)
+![Distribution of Class/ASD](https://github.com/Clarkson-Applied-Data-Science/2024_ia651_hemamalini_shifat/blob/main/Distribtuion%20of%20ClassASD.png)
 
 ![Distribution of Country of Residence](https://github.com/Clarkson-Applied-Data-Science/2024_ia651_hemamalini_shifat/blob/main/Distribtuion%20of%20country%20of%20residence.png)
 
@@ -242,6 +242,65 @@ smote = SMOTE(random_state=42)
 SMOTE (Synthetic Minority Over-sampling Technique) is used to address class imbalance in datasets, where one class is underrepresented compared to others. This imbalance can lead to biased models that perform poorly on the minority class.
 
 In our dataset, one of the class is underrepresented so we are using the smote to balance the data.
+
+# Logistic Regression
+
+Logistic Regression model is implemented for the data using maximum iteration of 1000.
+
+We first train the model using scaled training data. Then, we predict the training data and also testing data to see how well the model performs.
+
+| **Values**   | **Train** | **Test** |
+|--------------|-----------|----------|
+| **Accuracy** | 97.6%     | 95.7%    |
+| **F1 score** | 97%       | 94.6%    |
+
+### Grid Search
+
+#### Hyperparameter :
+```python
+lg_param_grid = {
+    'lg__C': [0.1, 10, 100, 200, 500],
+    'lg__penalty': ['l1', 'l2']
+```
+Best Parameters: {'lg__C': 10, 'lg__penalty': 'l2'}
+Best Score: 0.96
+
+Performing grid search for different hyperparameter helped in selecting the best parameters and best score for the model.
+
+Best score for the Logistic Regression is 96% which is pretty good score.
+
+Now, training and testing the model using these paramaters will give us the final best accuracy for the model.
+
+Logistic Regression Best Training Accuracy: 0.98
+
+Logistic Regression Best Testing Accuracy: 0.95
+
+F1 score:0.9113924050632911
+
+ROC AUC score:0.9837313041196536
+
+|              | precision | recall | f1-score | support |
+|--------------|-----------|--------|----------|---------|
+| 0            | 0.99      | 0.94   | 0.97     | 103     |
+| 1            | 0.86      | 0.97   | 0.91     | 37      |
+| accuracy     |           |        | 0.95     | 140     |
+| macro avg    | 0.92      | 0.96   | 0.94     | 140     |
+| weighted avg | 0.95      | 0.95   | 0.95     | 140     |
+
+The accuracy after using the best hyperparameters doesn't have much difference in the result. 
+
+The final Testing Accuracy for the model is 95%.
+
+The Accuracy is pretty good fo the Logistic Regression.
+
+F1 Score: 0.911 - The F1 score is the harmonic mean of precision and recall It tells you how the model trades off bias and variance. A score of 0.911 gives a slightly more balanced precision and recall model which is good.
+
+ROC AUC Score: 0.984-The ROC AUC score evaluates the model's capacity to predict classes. A score of 0.984 very close to 1 suggests that the model has a fantastic discriminative capability between both classes positive and negative classs is fine tuned.
+
+Confusion Matrix:
+
+![Confusion Matrix]()
+
 
 
 
