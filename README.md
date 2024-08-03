@@ -294,7 +294,7 @@ Now, training and testing the model using these paramaters will give us the fina
 
 - F1 score:0.91
 
-ROC AUC score:0.98
+- ROC AUC score:0.98
 
 |              | precision | recall | f1-score | support |
 |--------------|-----------|--------|----------|---------|
