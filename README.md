@@ -115,7 +115,7 @@ Before implementing any of the models for the dataset, we would like to explore 
 
 First of all, using python we have obtained the summary of the numerical variables using describe() method:
 
-|       | **A1_Score** | **A2_Score** | **A3_Score** | **A4_Score** | **A5_Score** | **A6_Score** | **A7_Score** | **A8_Score** | **A9_Score** | **A10_Score** | **age**    | **result ** |
+|       | **A1_Score** | **A2_Score** | **A3_Score** | **A4_Score** | **A5_Score** | **A6_Score** | **A7_Score** | **A8_Score** | **A9_Score** | **A10_Score** | **age**    | **result** |
 |-----------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|---------------|------------|-------------|
 | **count** | 704.000000   | 704.000000   | 704.000000   | 704.000000   | 704.000000   | 704.000000   | 704.000000   | 704.000000   | 704.000000   | 704.000000    | 702.000000 | 704.000000  |
 | **mean**  | 0.721591     | 0.453125     | 0.457386     | 0.495739     | 0.498580     | 0.284091     | 0.417614     | 0.649148     | 0.323864     | 0.573864      | 29.698006  | 4.875000    |
@@ -128,13 +128,13 @@ First of all, using python we have obtained the summary of the numerical variabl
 
 ### Dataset Cleaning
 
-We tried to check if there are any null values in the dataset.There were 2 null values in the column age, so we dropped it.
+- We tried to check if there are any null values in the dataset.There were 2 null values in the column age, so we dropped it.
 
-Then, we checked for any outliers and found that age has a outlier and removed it from the dataset.
+- Then, we checked for any outliers and found that age has a outlier and removed it from the dataset.
 
-Also, removed the duplicate values. Replaced some values with proper notation like '?' with 'others'. Dropped the age_decs column because it has only one value which is 18 and more.
+- Also, removed the duplicate values. Replaced some values with proper notation like '?' with 'others'. Dropped the age_decs column because it has only one value which is 18 and more.
 
-After all this process, we finally have 696 rows and 20 columns.
+- After all this process, we finally have 696 rows and 20 columns.
 
 ### Visualization of Categorical Variables
 
@@ -288,11 +288,11 @@ Best score for the Logistic Regression is 96% which is pretty good score.
 
 Now, training and testing the model using these paramaters will give us the final best accuracy for the model.
 
-Logistic Regression Best Training Accuracy: 0.98
+- Logistic Regression Best Training Accuracy: 0.98
 
-Logistic Regression Best Testing Accuracy: 0.95
+- Logistic Regression Best Testing Accuracy: 0.95
 
-F1 score:0.91
+- F1 score:0.91
 
 ROC AUC score:0.98
 
@@ -304,30 +304,30 @@ ROC AUC score:0.98
 | macro avg    | 0.92      | 0.96   | 0.94     | 140     |
 | weighted avg | 0.95      | 0.95   | 0.95     | 140     |
 
-The accuracy after using the best hyperparameters doesn't have much difference in the result. 
+- The accuracy after using the best hyperparameters doesn't have much difference in the result. 
 
-The final Testing Accuracy for the model is 95%.
+- The final Testing Accuracy for the model is 95%.
 
-The Accuracy is pretty good fo the Logistic Regression.
+- The Accuracy is pretty good fo the Logistic Regression.
 
-F1 Score: 0.911 - The F1 score is the harmonic mean of precision and recall It tells you how the model trades off bias and variance. A score of 0.911 gives a slightly more balanced precision and recall model which is good.
+- F1 Score: 0.911 - The F1 score is the harmonic mean of precision and recall It tells you how the model trades off bias and variance. A score of 0.911 gives a slightly more balanced precision and recall model which is good.
 
-ROC AUC Score: 0.984 - The ROC AUC score evaluates the model's capacity to predict classes. A score of 0.984 very close to 1 suggests that the model has a fantastic discriminative capability between both classes positive and negative classs is fine tuned.
+- ROC AUC Score: 0.984 - The ROC AUC score evaluates the model's capacity to predict classes. A score of 0.984 very close to 1 suggests that the model has a fantastic discriminative capability between both classes positive and negative classs is fine tuned.
 
 Confusion Matrix:
 
 ![Confusion Matrix](https://github.com/Clarkson-Applied-Data-Science/2024_ia651_hemamalini_shifat/blob/main/Logistic%20regression%20Confusion%20Matrix.png)
 
-True Negatives (TN): 97
+- True Negatives (TN): 97
 The model correctly predicted 97 instances as negative (class 0).
 
-False Positives (FP): 6
+- False Positives (FP): 6
 The model incorrectly predicted 6 instances as positive when they were actually negative.
 
-False Negatives (FN): 1
+- False Negatives (FN): 1
 The model incorrectly predicted 1 instance as negative when it was actually positive.
 
-True Positives (TP): 36
+- True Positives (TP): 36
 The model correctly predicted 36 instances as positive (class 1).
 
 The model did a good job identifying most cases of negative and positive instances, making only a few errors. Namely, it had 6 false positive errors and just one false negative. This means that model is very good at predicting each classes and with only few misclassifications.
@@ -369,13 +369,13 @@ Best score for Decision Tree is 93% which is good but lesser than the Logistic R
 
 Using best parameters, trained and tested the model which gave the final training and testing Accuracy, F1 score, ROC AUC score.
 
-Decision Tree Best Training Accuracy: 0.98
+- Decision Tree Best Training Accuracy: 0.98
 
-Decision Tree Best Testing Accuracy: 0.92
+- Decision Tree Best Testing Accuracy: 0.92
 
-F1 score:0.85
+- F1 score:0.85
 
-ROC AUC score:0.94
+- ROC AUC score:0.94
 
 |              | precision | recall | f1-score | support |
 |--------------|-----------|--------|----------|---------|
@@ -385,26 +385,26 @@ ROC AUC score:0.94
 | macro avg    | 0.90      | 0.90   | 0.90     | 140     |
 | weighted avg | 0.92      | 0.92   | 0.92     | 140     |
 
-The Final Training Accuracy for the Decision Tree is 98% and final testing accuracy for testing accuracy is 92% which is good model but the accuracy is lesser than the Logistic Regression.
+- The Final Training Accuracy for the Decision Tree is 98% and final testing accuracy for testing accuracy is 92% which is good model but the accuracy is lesser than the Logistic Regression.
 
-F1 Score - 0.853: Our model achieve an AUC of 0.853 which points that we have a balance precision and recall in the positive class (1).
+- F1 Score - 0.853: Our model achieve an AUC of 0.853 which points that we have a balance precision and recall in the positive class (1).
 
-ROC AUC Score- 0.942 : A score of 0.942 indicates a very good model discrimination between the two categories, where higher scores mean better performance
+- ROC AUC Score- 0.942 : A score of 0.942 indicates a very good model discrimination between the two categories, where higher scores mean better performance
 
 Confusion Matrix:
 
 ![Confusion Matrix](https://github.com/Clarkson-Applied-Data-Science/2024_ia651_hemamalini_shifat/blob/main/Decision%20Tree%20Confusion%20Matrix.png)
 
-True Negatives (TN): 97
+- True Negatives (TN): 97
 The model correctly predicted 97 instances as negative (class 0). These are the true negative cases.
 
-False Positives (FP): 6
+- False Positives (FP): 6
 The model incorrectly predicted 6 instances as positive when they were actually negative. These are false positive cases.
 
-False Negatives (FN): 5
+- False Negatives (FN): 5
 The model incorrectly predicted 5 instances as negative when they were actually positive. These are false negative cases.
 
-True Positives (TP): 32
+- True Positives (TP): 32
 The model correctly predicted 32 instances as positive (class 1). These are the true positive cases.
 
 The Decision Tree model also has good accuracy overall but not better than Logistic Regression.
@@ -436,13 +436,13 @@ Best Score: 0.93
 
 The max depth for random forest is 20 and n_estimators is 20. At this values, the model will perform better than other than values. Now let's try to use these values, train and test the model.
 
-Random Forest Best Training Accuracy: 1.0
+- Random Forest Best Training Accuracy: 1.0
 
-Random Forest Best Testing Accuracy: 0.9
+- Random Forest Best Testing Accuracy: 0.9
 
-F1 score:0.81
+- F1 score:0.81
 
-ROC AUC score:0.97
+- ROC AUC score:0.97
 
 |              | precision | recall | f1-score | support |
 |--------------|-----------|--------|----------|---------|
@@ -452,26 +452,26 @@ ROC AUC score:0.97
 | macro avg    | 0.87      | 0.88   | 0.87     | 140     |
 | weighted avg | 0.90      | 0.90   | 0.90     | 140     |
 
-The final training accuracy is 100% but the testing accuracy is 90% which means the model is overfitting.
+- The final training accuracy is 100% but the testing accuracy is 90% which means the model is overfitting.
 
-F1 Score-0.816 : An F1 score of 0.816 means the model strikes a good balance between precision and recall for the positive class (1), but there is big room to improve it due to higher value can also achieved from this kind on dataset by just changing classifier.
+- F1 Score-0.816 : An F1 score of 0.816 means the model strikes a good balance between precision and recall for the positive class (1), but there is big room to improve it due to higher value can also achieved from this kind on dataset by just changing classifier.
 
-ROC AUC Score - 0.972 : A score of 0.972 is quite high which means the model does fantastic job in discriminating between the two classes.
+- ROC AUC Score - 0.972 : A score of 0.972 is quite high which means the model does fantastic job in discriminating between the two classes.
 
 Confusion Matrix:
 
 ![Confusion Matrix](https://github.com/Clarkson-Applied-Data-Science/2024_ia651_hemamalini_shifat/blob/main/Random%20forest%20confusion%20matrix.png)
 
-True Negatives (TN): 95
+- True Negatives (TN): 95
 The model correctly predicted 95 instances as negative (class 0).
 
-False Positives (FP): 8
+- False Positives (FP): 8
 The model incorrectly predicted 8 instances as positive when they were actually negative.
 
-False Negatives (FN): 6
+- False Negatives (FN): 6
 The model incorrectly predicted 6 instances as negative when they were actually positive.
 
-True Positives (TP): 31
+- True Positives (TP): 31
 The model correctly predicted 31 instances as positive (class 1).
 
 The model performs very well with training data but not with the testing data. There is some trade-off with false positives and false negatives.
@@ -524,13 +524,13 @@ ethnicity_Middle Eastern : 0.027
 
 ![Feature importance random forest](https://github.com/Clarkson-Applied-Data-Science/2024_ia651_hemamalini_shifat/blob/main/Random%20forest%20Feature%20importance.png)
 
-A1_Score is the most important feature, contributing 44.5% to the model's predictions.
+- A1_Score is the most important feature, contributing 44.5% to the model's predictions.
 
-A2_Score and A3_Score are also important but less so, with 10.9% and 5.8% contributions, respectively.
+- A2_Score and A3_Score are also important but less so, with 10.9% and 5.8% contributions, respectively.
 
-Ethnicity features like ethnicity_Asian and ethnicity_Middle Eastern have moderate importance.
+- Ethnicity features like ethnicity_Asian and ethnicity_Middle Eastern have moderate importance.
 
-Features such as age, gender, and jaundice have lower importance.
+- Features such as age, gender, and jaundice have lower importance.
 
 # Support Vector Classifier
 
@@ -563,13 +563,13 @@ Best Score: 0.96
 
 Here, the best parameter for kernel is linear.The C is 10, degree is 1 and gamma is selected as 0.1. Now's let's train and test these models using best paramters.
 
-SVC Best Training Accuracy: 0.98
+- SVC Best Training Accuracy: 0.98
 
-SVC Forest Best Testing Accuracy: 0.97
+- SVC Forest Best Testing Accuracy: 0.97
 
-F1 score:0.94
+- F1 score:0.94
 
-ROC AUC score:0.98
+- ROC AUC score:0.98
 
 |              | precision | recall | f1-score | support |
 |--------------|-----------|--------|----------|---------|
@@ -579,27 +579,27 @@ ROC AUC score:0.98
 | macro avg    | 0.96      | 0.97   | 0.96     | 140     |
 | weighted avg | 0.97      | 0.97   | 0.97     | 140     |
 
-The model achieved a training accuracy of 98.6% on the training data. This indicates that the model performs very well on the data it was trained on.
+- The model achieved a training accuracy of 98.6% on the training data. This indicates that the model performs very well on the data it was trained on.
 The model achieved a testing accuracy of 97.1% on the test data. This is also very high, showing that the model generalizes well to new, unseen data.
 
-F1 Score- 0.947 : The F1 score of 0.947 is a measure of the model's accuracy, balancing precision and recall. A high F1 score indicates that the model is good at identifying positive cases with a balanced precision and recall.
+- F1 Score- 0.947 : The F1 score of 0.947 is a measure of the model's accuracy, balancing precision and recall. A high F1 score indicates that the model is good at identifying positive cases with a balanced precision and recall.
 
-ROC AUC Score- 0.985 : The ROC AUC score of 0.985 is very high, indicating that the model has an excellent ability to distinguish between different classes.
+- ROC AUC Score- 0.985 : The ROC AUC score of 0.985 is very high, indicating that the model has an excellent ability to distinguish between different classes.
 
 Confusion Matrix:
 
 ![Confusion Matrix](https://github.com/Clarkson-Applied-Data-Science/2024_ia651_hemamalini_shifat/blob/main/SVC%20Confusion%20Matrix.png)
 
-True Negatives (TN): 100
+- True Negatives (TN): 100
 The model correctly predicted 100 instances as negative (class 0).
 
-False Positives (FP): 3
+- False Positives (FP): 3
 The model incorrectly predicted 3 instances as positive when they were actually negative.
 
-False Negatives (FN): 1
+- False Negatives (FN): 1
 The model incorrectly predicted 1 instance as negative when it was actually positive.
 
-True Positives (TP): 36
+- True Positives (TP): 36
 The model correctly predicted 36 instances as positive (class 1).
 
 The model performs exceptionally well with high accuracy, precision, and recall for both classes. It has very few misclassifications, indicating strong performance.
